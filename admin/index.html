@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin MSS Fire Protection</title>
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script src="/admin/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="monogram">MSS</span><strong>MSS Fire Protection</strong></div>
+    <div class="topbar-actions">
+      <button type="button" id="password-settings" class="secondary" aria-controls="password-panel" aria-expanded="false" hidden>Atur kata sandi</button>
+      <a class="preview-link" href="/" target="_blank" rel="noopener noreferrer">Lihat situs ↗</a>
+    </div>
+  </header>
+  <main>
+    <section id="login" class="login panel" aria-labelledby="login-title">
+      <h1 id="login-title">Dashboard Admin</h1>
+      <p id="login-description">Memeriksa pengaturan akses…</p>
+      <form id="access-form">
+        <label id="access-label" for="access-code">Kode akses</label>
+        <input id="access-code" type="password" required autocomplete="off" spellcheck="false">
+        <button class="primary" id="login-submit" type="submit" disabled>Buka Dashboard</button>
+        <p id="login-status" role="alert"></p>
+      </form>
+    </section>
+    <div id="dashboard" class="dashboard" hidden>
+      <aside class="sidebar" aria-label="Bagian situs">
+        <h2>Bagian Situs</h2>
+        <nav id="sections"></nav>
+        <button type="button" id="new-section" class="secondary">+ Tambah bagian</button>
+      </aside>
+      <section class="workspace" aria-labelledby="section-title">
+        <header class="workspace-header">
+          <h1 id="section-title"></h1>
+          <button id="save" class="primary" type="submit" form="editor">Simpan perubahan</button>
+        </header>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <section id="password-panel" class="panel password-panel" aria-labelledby="password-title" hidden>
+          <h2 id="password-title">Kata sandi dashboard</h2>
+          <form id="password-form">
+            <label id="current-password-field" class="field" hidden>
+              <span>Kata sandi saat ini</span>
+              <input id="current-password" type="password" autocomplete="current-password" maxlength="256" disabled>
+            </label>
+            <label class="field" for="new-password">
+              <span>Kata sandi baru</span>
+              <input id="new-password" type="password" autocomplete="new-password" maxlength="256" aria-describedby="password-hint" required>
+            </label>
+            <p id="password-hint" class="hint"></p>
+            <label class="field" for="confirm-password">
+              <span>Ulangi kata sandi baru</span>
+              <input id="confirm-password" type="password" autocomplete="new-password" maxlength="256" required>
+            </label>
+            <div><button id="save-password" class="primary" type="submit">Simpan kata sandi</button></div>
+            <p id="password-status" class="status" role="status"></p>
+          </form>
+        </section>
+        <form id="editor"></form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
