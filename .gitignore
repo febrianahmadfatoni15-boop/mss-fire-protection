@@ -1,0 +1,21 @@
+# Dependencies and generated files
+node_modules/
+
+# Local admin backups and temporary files
+.admin-backups/
+*.admin-tmp
+
+# Local release/build artifacts and nested repositories
+.sites-release/
+dist/
+.git/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,10 @@
+{
+  "name": "mss-fire-protection",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "admin": "node admin/server.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": { "parse5": "8.0.0" }
+}
